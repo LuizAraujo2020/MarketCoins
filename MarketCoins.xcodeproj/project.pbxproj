@@ -21,6 +21,8 @@
 		6F8147252A9D87DB00C6AD95 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8147242A9D87DB00C6AD95 /* API.swift */; };
 		6F8147272A9D8E9D00C6AD95 /* GenericStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8147262A9D8E9D00C6AD95 /* GenericStore.swift */; };
 		6F81472A2A9D91F400C6AD95 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8147292A9D91F400C6AD95 /* Extensions.swift */; };
+		6F81472C2A9D967000C6AD95 /* CoinsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F81472B2A9D967000C6AD95 /* CoinsRouter.swift */; };
+		6F81472E2A9D969100C6AD95 /* GlobalRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F81472D2A9D969100C6AD95 /* GlobalRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		6F8147242A9D87DB00C6AD95 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		6F8147262A9D8E9D00C6AD95 /* GenericStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericStore.swift; sourceTree = "<group>"; };
 		6F8147292A9D91F400C6AD95 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		6F81472B2A9D967000C6AD95 /* CoinsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinsRouter.swift; sourceTree = "<group>"; };
+		6F81472D2A9D969100C6AD95 /* GlobalRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +139,8 @@
 		6F8147222A9D87AC00C6AD95 /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				6F81472B2A9D967000C6AD95 /* CoinsRouter.swift */,
+				6F81472D2A9D969100C6AD95 /* GlobalRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -235,8 +241,10 @@
 				6F8147182A9D517F00C6AD95 /* CurrentDataModel.swift in Sources */,
 				6F81471E2A9D552700C6AD95 /* GlobalModel.swift in Sources */,
 				6F8147252A9D87DB00C6AD95 /* API.swift in Sources */,
+				6F81472C2A9D967000C6AD95 /* CoinsRouter.swift in Sources */,
 				6F81472A2A9D91F400C6AD95 /* Extensions.swift in Sources */,
 				6F8147022A9D4B6000C6AD95 /* SceneDelegate.swift in Sources */,
+				6F81472E2A9D969100C6AD95 /* GlobalRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
