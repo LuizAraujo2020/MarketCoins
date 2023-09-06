@@ -8,14 +8,14 @@
 import Foundation
 
 enum CoinsRouter {
-    case coinsMarkers(currency: String, cryptoCurrency: [String]?, order: String, parPage: Int, page: Int, percentage: String)
+    case coinsMarkets(currency: String, cryptoCurrency: [String]?, order: String, parPage: Int, page: Int, percentage: String)
     case coinsByIdMarketChart(id: String, currency: String, from: String, to: String)
     case coinsByIDOhlc(id: String, currency: String, days: String)
     case coinsById(id: String)
 
     var path: String {
         switch self {
-            case .coinsMarkers:
+            case .coinsMarkets:
                 return API.coinsMarkets
             case .coinsByIdMarketChart(let id, _, _, _):
                 return String(format: API.coinsByIDMarketChart, id)
@@ -30,7 +30,7 @@ enum CoinsRouter {
         guard let url = URL(string: API.baseURL) else { return nil }
 
         switch self {
-            case .coinsMarkers(let currency, let cryptoCurrency, let order, let parPage, let page, let percentage):
+            case .coinsMarkets(let currency, let cryptoCurrency, let order, let parPage, let page, let percentage):
                 var parameters: [String : String] = [
                     "vs_currency": currency,
                     "order": order,
