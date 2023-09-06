@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct MarketChartModel {
+struct MarketChartModel: Codable {
 //    let prices, marketCaps, totalVolumes: [[Double]]
     let prices: [GraphicDataModel]
 }
