@@ -152,7 +152,7 @@
 				6DACD7012918562E004FCA39 /* Assets.xcassets */,
 				6DACD7032918562E004FCA39 /* LaunchScreen.storyboard */,
 				6DACD7062918562E004FCA39 /* Info.plist */,
-				6DACD72429185D1E004FCA39 /* Extensions.swift */,
+				6F4E4E532AAB508600ADA8C2 /* Extensions */,
 				6DACD74429187E55004FCA39 /* KarketCoinsError.swift */,
 				6DACD74D29189A94004FCA39 /* CoinHeaderView.xib */,
 				6DACD75129199332004FCA39 /* FiltersView.swift */,
@@ -300,6 +300,14 @@
 				6DACD7692919BAB8004FCA39 /* CoinInteractor.swift */,
 			);
 			path = Coin;
+			sourceTree = "<group>";
+		};
+		6F4E4E532AAB508600ADA8C2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6DACD72429185D1E004FCA39 /* Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
