@@ -2,12 +2,11 @@
 //  MarketChartModel.swift
 //  MarketCoins
 //
-//  Created by Luiz Araujo on 28/08/23.
+//  Created by Luiz Araujo on 03/09/22.
 //
 
 import Foundation
 
 struct MarketChartModel: Codable {
-//    let prices, marketCaps, totalVolumes: [[Double]]
     let prices: [GraphicDataModel]
 }

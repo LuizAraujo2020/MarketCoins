@@ -2,18 +2,18 @@
 //  CoinsRouter.swift
 //  MarketCoins
 //
-//  Created by Luiz Araujo on 28/08/23.
+//  Created by Luiz Araujo on 03/09/22.
 //
 
 import Foundation
 
 enum CoinsRouter {
-
+    
     case coinsMarkets(currency: String, crytocurrency: [String]?, order: String, parPage: Int, page: Int, percentage: String)
     case coinsByIdMarketChart(id: String, currency: String, from: String, to: String)
     case coinsByIdOhlc(id: String, currency: String, days: String)
     case coinsById(id: String)
-
+    
     var path: String {
         switch self {
         case .coinsMarkets:
@@ -26,10 +26,10 @@ enum CoinsRouter {
             return String(format: API.coinsById, id)
         }
     }
-
+    
     func asURLRequest() throws -> URL? {
         guard let url = URL(string: API.baseURL) else { return nil }
-
+        
         switch self {
         case .coinsMarkets(let currency, let crytocurrency, let order, let parPage, let page, let percentage):
             var parameters: [String: String] = [
@@ -40,11 +40,11 @@ enum CoinsRouter {
                 "sparkline": String(false),
                 "price_change_percentage": percentage
             ]
-
+            
             if let crytocurrency {
                 parameters["ids"] = crytocurrency.joined(separator: ",")
             }
-
+            
             return url.appendingQueryParameters(path: path, parameters: parameters)
         case .coinsByIdMarketChart(_, let currency, let from, let to):
             let parameters: [String: String] = [

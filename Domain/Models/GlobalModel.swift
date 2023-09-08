@@ -1,11 +1,18 @@
+//
+//  GlobalModel.swift
+//  MarketCoins
+//
+//  Created by Luiz Araujo on 03/09/22.
+//
+
 import Foundation
 
 struct GlobalModel: Codable {
-    let data: CryptoCurrencyModel
+    let data: CryptocurrencyModel
 }
 
-// MARK: - DataClass
-struct CryptoCurrencyModel: Codable {
+// MARK: - CryptocurrencyModel
+struct CryptocurrencyModel: Codable {
     let activeCryptocurrencies: Int // criptomoedas ativas
     let upcomingIcos: Int // próximos icos
     let ongoingIcos: Int // icos em andamento

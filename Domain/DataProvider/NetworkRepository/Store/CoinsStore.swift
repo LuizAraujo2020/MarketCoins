@@ -2,7 +2,7 @@
 //  CoinsStore.swift
 //  MarketCoins
 //
-//  Created by Luiz Araujo on 30/08/23.
+//  Created by Luiz Araujo on 03/09/22.
 //
 
 import Foundation
@@ -28,7 +28,7 @@ protocol CoinsStoreProtocol: GenericStoreProtocol {
 }
 
 class CoinsStore: GenericStoreRequest, CoinsStoreProtocol {
-
+    
     func fetchLisCoins(by vsCurrency: String,
                        with crytocurrency: [String]?,
                        orderBy order: String,
@@ -36,7 +36,7 @@ class CoinsStore: GenericStoreRequest, CoinsStoreProtocol {
                        page: Int,
                        percentagePrice: String,
                        completion: @escaping completion<[CoinModel]?>) {
-
+        
         do {
             guard let url = try CoinsRouter.coinsMarkets(currency: vsCurrency,
                                                          crytocurrency: crytocurrency,
@@ -51,13 +51,13 @@ class CoinsStore: GenericStoreRequest, CoinsStoreProtocol {
             completion(nil, error)
         }
     }
-
+    
     func fetchHistorical(by id: String,
                          currency vsCurrency: String,
                          from: String,
                          to: String,
                          completion: @escaping completion<MarketChartModel?>) {
-
+        
         do {
             guard let url = try CoinsRouter.coinsByIdMarketChart(id: id, currency: vsCurrency, from: from, to: to).asURLRequest() else {
                 return completion(nil, error)
@@ -67,12 +67,12 @@ class CoinsStore: GenericStoreRequest, CoinsStoreProtocol {
             completion(nil, error)
         }
     }
-
+    
     func fetchHistorical(by id: String,
                          currency vsCurrency: String,
                          of days: String,
                          completion: @escaping completion<[GraphicDataModel]?>) {
-
+        
         do {
             guard let url = try CoinsRouter.coinsByIdOhlc(id: id, currency: vsCurrency, days: days).asURLRequest() else {
                 return completion(nil, error)
@@ -82,7 +82,7 @@ class CoinsStore: GenericStoreRequest, CoinsStoreProtocol {
             completion(nil, error)
         }
     }
-
+    
     func fetchCoin(by id: String, completion: @escaping completion<CurrentDataModel?>) {
         do {
             guard let url = try CoinsRouter.coinsById(id: id).asURLRequest() else {
@@ -93,5 +93,5 @@ class CoinsStore: GenericStoreRequest, CoinsStoreProtocol {
             completion(nil, error)
         }
     }
-
+    
 }

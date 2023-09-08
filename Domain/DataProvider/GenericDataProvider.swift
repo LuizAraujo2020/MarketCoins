@@ -2,7 +2,7 @@
 //  GenericDataProvider.swift
 //  MarketCoins
 //
-//  Created by Luiz Araujo on 05/09/23.
+//  Created by Luiz Araujo on 03/09/22.
 //
 
 import Foundation

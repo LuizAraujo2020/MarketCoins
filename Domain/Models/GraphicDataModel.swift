@@ -2,7 +2,7 @@
 //  GraphicDataModel.swift
 //  MarketCoins
 //
-//  Created by Luiz Araujo on 28/08/23.
+//  Created by Luiz Araujo on 03/09/22.
 //
 
 import Foundation

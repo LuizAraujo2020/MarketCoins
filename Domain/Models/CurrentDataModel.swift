@@ -2,7 +2,7 @@
 //  CurrentDataModel.swift
 //  MarketCoins
 //
-//  Created by Luiz Araujo on 28/08/23.
+//  Created by Luiz Araujo on 03/09/22.
 //
 
 import Foundation
@@ -60,7 +60,7 @@ struct MarketDataModel: Codable {
     let totalSupply: Double?
     let maxSupply: Double?
     let circulatingsupply: Double
-
+    
     enum CodingKeys: String, CodingKey {
         case currentPrice = "current_price"
         case marketCap = "market_cap"
